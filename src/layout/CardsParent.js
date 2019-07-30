@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardsChild from "./CardsChild";
 
+
 export default function CardsParent() {
     const [data, setData] = useState([]);
 
@@ -14,11 +15,12 @@ export default function CardsParent() {
         }
         fetchData();
            
-    },[])
+    }, [])
+    
     
   return (
       <div>
-          <CardsChild data={data}/>  
+          <CardsChild data={data} />  
    
     </div>
   );
