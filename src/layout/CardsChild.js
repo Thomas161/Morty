@@ -1,36 +1,30 @@
 import React from 'react';
-   
-const images = [
-  "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/100.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/110.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/127.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/206.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/134.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/303.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/259.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/172.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/36.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/80.jpeg",
-  "https://rickandmortyapi.com/api/character/avatar/93.jpeg"
-];
+import StarRating from "./StarRating";
 
-const randomImages = images[Math.floor(Math.random) * images.length];
+    
+export default function CardsChild({ data }) {
+    // const [rating, setRating] = useState(1);
 
-
-export default function CardsChild({ data,im }) {
+    //const handleClick = (e) => alert('You left', e, "stars");
 
     return (
       <>
         <div className="container">
           <div className="row">
             {data.map(m => (
-              <div className="col-sm-4">
-                <div className="card">
+              <div
+                className="col-sm-4"
+                style={{ marginBottom: "10px", marginTop: "10px" }}
+              >
+                <div className="card bg-info text-white">
                   <div className="card-body">
-                    <h5 className="card-title"> {m.episode}</h5>
+                    <h6 className="card-header bg-primary"> {m.episode}</h6>
                     <p className="card-text"> {m.name}</p>
-                    <p>{m.air_date}</p>
+                    <br />
+                    <StarRating
+                      totalStars={5}
+                    />
+                    <small> Aired: {m.air_date}</small>
                   </div>
                 </div>
               </div>

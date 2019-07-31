@@ -3,7 +3,7 @@ import CardsChild from "./CardsChild";
 
 export default function CardsParent() {
     const [data, setData] = useState([]);
-    const [im, setIm] = useState([]);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,23 +17,12 @@ export default function CardsParent() {
            
     }, [])
 
-    useEffect(() => {
-         const fetchIm = async () => {
-            const response = await fetch("https://rickandmortyapi.com/api/character/");
-            const im = await response.json();
-            console.log("Response ", response);
-            console.log("Data", im);
-            setIm(im.results)
-        }
-        fetchIm();
-           
-    
-    },[])
+  
     
     
   return (
       <div>
-          <CardsChild data={data} im={im} />  
+          <CardsChild data={data} />  
    
     </div>
   );
