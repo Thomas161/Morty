@@ -1,54 +1,42 @@
 import React from 'react';
-import Image from './Image';
-//import images from "../pictures/RickandMortyPilot.jpg";
+   
+const images = [
+  "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/100.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/110.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/127.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/206.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/134.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/303.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/259.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/172.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/36.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/80.jpeg",
+  "https://rickandmortyapi.com/api/character/avatar/93.jpeg"
+];
+
+const randomImages = images[Math.floor(Math.random) * images.length];
 
 
-const cardStyle = {
-  display: "grid",
-  border: "1px dashed rgba(114, 186, 94, 0.35)",
-  height: "230px",
-  width: "12rem",
-  gridTemplateColumns: "repeat(4, auto)",
-    gridTemplateRows: "auto",
-  background: "aqua",
-  paddingLeft: "5px",
-  justifyItems: "center",
-  margin: 0
-};    
-
-
-export default function CardsChild({ data }) {
+export default function CardsChild({ data,im }) {
 
     return (
       <>
         <div className="container">
           <div className="row">
-            <div className="col-sm-4">
-              {data.map(m => (
-                <div className="card" style={cardStyle}>
+            {data.map(m => (
+              <div className="col-sm-4">
+                <div className="card">
                   <div className="card-body">
                     <h5 className="card-title"> {m.episode}</h5>
                     <p className="card-text"> {m.name}</p>
-
-                    <Image />
+                    <p>{m.air_date}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className="col-sm-4">
-              {data.map(m => (
-                <div className="card" style={cardStyle}>
-                  <div className="card-body">
-                    <h5 className="card-title"> {m.episode}</h5>
-                    <p className="card-text"> {m.name}</p>
-
-                    <Image />
-                  </div>
-                </div>
-              ))}
-             </div>
-            </div>
-        </div>    
+              </div>
+            ))}
+          </div>
+        </div>
       </>
     );
 }

@@ -1,6 +1,12 @@
 body {
   margin: 0;
   font-family:  "Roboto";
-  background-color: orange;
+  background-image: url("./pic/WallpaperRickMorty.jpg");
+  background-size: 100%;
+  background-position: fixed;
+    background-repeat : repeat;
+      min-height: 100px;
+      background-attachment: fixed;
+  
 }
 
