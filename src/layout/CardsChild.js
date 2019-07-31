@@ -3,9 +3,6 @@ import StarRating from "./StarRating";
 
     
 export default function CardsChild({ data }) {
-    // const [rating, setRating] = useState(1);
-
-    //const handleClick = (e) => alert('You left', e, "stars");
 
     return (
       <>
