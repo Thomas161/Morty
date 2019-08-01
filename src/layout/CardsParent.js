@@ -1,11 +1,13 @@
 import React from "react";
 import CardsChild from "./CardsChild";
-import _ from 'lodash';
+import { Button } from "react-floating-action-button";
 
 const inputStyle = {
     textAlign: 'center',
-    fontFamily: 'verdana',   
+    fontFamily: 'verdana',  
+    marginTop:'10px'
 }
+
 
 class CardsParent extends React.Component {
   constructor(props) {
@@ -33,6 +35,7 @@ class CardsParent extends React.Component {
             .includes(e.target.value.toLowerCase()));
          this.setState({data:tempData})
     }
+    //reset input field
     reset(e) {
         this.refs.form.reset();
     }
@@ -41,14 +44,22 @@ class CardsParent extends React.Component {
     const { data } = this.state;
     return (
       <div>
-        <form style={inputStyle} onSubmit={this.reset} >
+        <form style={inputStyle} onSubmit={this.reset}>
           <input
             type="text"
-                    placeholder="Search Episode"
-            ref="eps"        
+            placeholder="Search Episode"
+            ref="eps"
             onChange={this.filterNames.bind(this)}
           />
-          <button  type="submit">Revert</button>
+          <br />
+                <Button
+          size="small"          
+            tooltip="oh geez rick"
+                    icon="fas fa-skull"
+                    
+          />
+            
+          
         </form>
         <CardsChild data={data} />
       </div>
@@ -58,31 +69,5 @@ class CardsParent extends React.Component {
 export default CardsParent;
   
 
-//   componentWillMount() {
-//     console.log("Component Mounts");
-//     fetch("https://rickandmortyapi.com/api/episode")
-//       .then(res => res.json())
-//       .then(result => {
-//         this.setState({
-//           data: result
-//         });
-//         // console.log(data);
-//       }, error);
-//   }
-  //const [tempData, tempSetData] = useState([]);
-  // const [fill, setFill] = useState([]);
-
-  //     useEffect(() => {
-  //         const fetchData = async () => {
-  //             const response = await fetch();
-  //             const apiResponse = await response.json();
-
-  //             console.log("Data", apiResponse);
-  //             setData(apiResponse.results)
-  //             console.log(data);
-  //         }
-  //         fetchData();
-
-  //     }, [])
 
   
