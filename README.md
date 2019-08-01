@@ -1,4 +1,4 @@
-[![npm version](http://img.shields.io/npm/v/REPO.svg?style=flat)](https://npmjs.org/package/REPO "View this project on npm")
+[![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 
 #Rick and Morty Web App
 I love this show, so i thought id make a simple Reactjs app
