@@ -1,12 +1,13 @@
 import React from 'react';
-import CardsParent from './layout/CardsParent';
-import Api from './layout/Api';
-import FaveEpisodes from "./layout/FaveEpisodes";
+import  CardsParent from './layout/CardsParent';
+//import Sound from '../src/sound/Sound';
+
+//import FaveEpisodes from "./layout/FaveEpisodes";
 
 function App() {
   return (
     <React.Fragment>
-      <Api />
+      {/* <Sound /> */}
       <CardsParent />
     </React.Fragment>
   );

@@ -10,6 +10,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-sound": "^1.2.0",
     "react-star-rating": "^1.4.2",
     "react-star-rating-component": "^1.4.1"
   },
