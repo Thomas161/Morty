@@ -9,7 +9,7 @@ export default function CardsChild({ data }) {
         <div className="container">
           <div className="row">
             {data.map(m => (
-              <div
+              <div key={m.id}
                 className="col-sm-4"
                 style={{ marginBottom: "10px", marginTop: "10px" }}
               >
