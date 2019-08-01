@@ -1,6 +1,6 @@
 [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 
-[Sauce](/src/pic/mcnugs.jpg)
+![Sauce](mcnugs.jpg)
 
 # Rick and Morty Web App
 I love this show, so i thought id make a simple Reactjs app
