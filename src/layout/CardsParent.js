@@ -1,12 +1,20 @@
 import React from "react";
 import CardsChild from "./CardsChild";
-import { Button } from "react-floating-action-button";
 
 const inputStyle = {
-    textAlign: 'center',
-    fontFamily: 'verdana',  
-    marginTop:'10px'
+      boxSizing: 'border-box',
+  border: 'none',
+  backgroundColor: '#3CBC8D',
+  color: 'white'
 }
+const buttonStyle = {
+    marginTop: '10px'
+}
+const formStyle = {
+  textAlign: "center",
+  fontFamily: "verdana",
+  marginTop: "10px"
+};
 
 
 class CardsParent extends React.Component {
@@ -17,14 +25,26 @@ class CardsParent extends React.Component {
     };
   }
     async componentDidMount() {
-        console.log("ComponentDidMount");
-        console.log("=================");
-    const url = "https://rickandmortyapi.com/api/episode";
-    const response = await fetch(url);
-    const data = await response.json();
-    this.setState({ data: data.results });
-    console.log(data);
-  }
+                                console.log(
+                                  "ComponentDidMount"
+                                );
+                                console.log(
+                                  "================="
+                                );
+                                const url =
+                                "https://rickandmortyapi.com/api/episode/?page=1";
+                                const url2 =
+                                "https://rickandmortyapi.com/api/episode/?page=2";
+                                const response = await fetch(url);
+                                const response2 = await fetch(url2);
+                                const data = await response.json();
+                                const data2 = await response2.json();
+                                this.setState({
+                                  data:
+                                    data.results.concat(data2.results)
+                                });
+                                console.log(data);
+                              }
   
     componentDidUpdate(prevProps, prevState) {
        
@@ -53,20 +73,16 @@ class CardsParent extends React.Component {
     const { data } = this.state;
     return (
       <div>
-        <form style={inputStyle} onSubmit={this.reset}>
-          <input
+            <form style={formStyle} onSubmit={this.reset}>
+                <input
+                    style={inputStyle}
             type="text"
             placeholder="Search Episode"
             ref="eps"
             onChange={this.filterNames.bind(this)}
           />
           <br />
-                <Button
-          size="small"          
-            tooltip="oh geez rick"
-                    icon="fas fa-skull"
-                    
-          />
+                <button className="btn btn-warning" style={buttonStyle}>Oh Geez Rick</button>
             
           
         </form>
