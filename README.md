@@ -2,13 +2,13 @@
 
 ![Sauce](sauce.jpg)
 
-### Great Site for Rick and Morty Audio
-[Sound Cloud](https://soundcloud.com/)
-
 # Rick and Morty Web App
 I love this show, so i thought id make a simple Reactjs app
 
 [Rick and Morty API](https://rickandmortyapi.com/)
+
+### Great Site for Rick and Morty Audio
+[Sound Cloud](https://soundcloud.com/)
 
 ## Available Scripts
 
