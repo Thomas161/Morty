@@ -2,6 +2,8 @@
 
 ![Sauce](sauce.jpg)
 
+![Quotes](RickAndMorty.mp3)
+
 # Rick and Morty Web App
 I love this show, so i thought id make a simple Reactjs app
 
