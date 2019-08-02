@@ -20,6 +20,6 @@ Runs the app in the development mode.<br>
 
 ## Check Me Out
 
-![Rick And Morty](https://rickandmorty2019.herokuapp.com/)
+[Rick And Morty](https://rickandmorty2019.herokuapp.com/)
 
 
