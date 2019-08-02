@@ -1,5 +1,6 @@
 import React from 'react';
 import StarRating from "./StarRating";
+import PropTypes from 'prop-types';
 
     
 export default function CardsChild({ data }) {
@@ -31,6 +32,16 @@ export default function CardsChild({ data }) {
       </>
     );
 }
+
+CardsChild.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({
+     episode: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  air_date: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+  })).isRequired
+ 
+};
        
              
            

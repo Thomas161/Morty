@@ -16,7 +16,9 @@ class CardsParent extends React.Component {
       data: []
     };
   }
-  async componentDidMount() {
+    async componentDidMount() {
+        console.log("ComponentDidMount");
+        console.log("=================");
     const url = "https://rickandmortyapi.com/api/episode";
     const response = await fetch(url);
     const data = await response.json();
@@ -24,17 +26,24 @@ class CardsParent extends React.Component {
     console.log(data);
   }
   
+    componentDidUpdate(prevProps, prevState) {
+       
+        if (prevState.data !== this.state.data) {
+          
+            console.log("ComponentDidUpdate");
+             console.log("=================");
+        
+      }
+  }  
+  
     filterNames(e) {
         e.preventDefault();
-        const { data } = this.state;
-          console.log(data);
-
-          console.log(e.target.value);
-        //   console.log(data);
+        const { data } = this.state;  
         let tempData = data.filter(item => item.name.toLowerCase()
             .includes(e.target.value.toLowerCase()));
          this.setState({data:tempData})
     }
+
     //reset input field
     reset(e) {
         this.refs.form.reset();
@@ -65,6 +74,11 @@ class CardsParent extends React.Component {
       </div>
     );
   }
+  
+    componentWillUnmount() {
+        console.log('Component WillUnMount');
+        console.log("=====================");
+  }  
 }
 export default CardsParent;
   
