@@ -18,4 +18,8 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br>
 
+## Check Me Out
+
+![Rick And Morty](https://rickandmorty2019.herokuapp.com/)
+
 
