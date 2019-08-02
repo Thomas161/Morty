@@ -2,7 +2,8 @@
 
 ![Sauce](sauce.jpg)
 
-[a link](/Users/664473/Desktop/truelevel/RickAndMorty.mp3)
+### Great Site for Rick and Morty Audio
+[Sound Cloud](https://soundcloud.com/)
 
 # Rick and Morty Web App
 I love this show, so i thought id make a simple Reactjs app
