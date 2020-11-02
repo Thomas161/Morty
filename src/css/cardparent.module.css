@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+.formStyle {
+  position: relative;
+  text-align: center;
+  font-family: "Audiowide", cursive;
+  margin-top: 10px;
+}
