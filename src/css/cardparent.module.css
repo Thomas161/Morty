@@ -5,3 +5,14 @@
   font-family: "Audiowide", cursive;
   margin-top: 10px;
 }
+
+.inputStyle {
+  box-sizing: border-box;
+  border: none;
+  background-color: #3cbc8d;
+  color: white;
+}
+
+.buttonStyle {
+  margin-top: 10px;
+}

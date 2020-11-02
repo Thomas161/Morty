@@ -2,21 +2,12 @@ import React from "react";
 import CardsChild from "./CardsChild";
 import f from "../css/cardparent.module.css";
 
-const inputStyle = {
-  boxSizing: "border-box",
-  border: "none",
-  backgroundColor: "#3CBC8D",
-  color: "white",
-};
-const buttonStyle = {
-  marginTop: "10px",
-};
-
 class CardsParent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
+      charData: [],
     };
   }
   async componentDidMount() {
@@ -24,14 +15,19 @@ class CardsParent extends React.Component {
     console.log("=================");
     const url = "https://rickandmortyapi.com/api/episode/?page=1";
     const url2 = "https://rickandmortyapi.com/api/episode/?page=2";
+    const characterUrl = "https://rickandmortyapi.com/api/character/";
     const response = await fetch(url);
     const response2 = await fetch(url2);
+    const response3 = await fetch(characterUrl);
     const data = await response.json();
     const data2 = await response2.json();
+    const data3 = await response3.json();
     this.setState({
       data: data.results.concat(data2.results),
+      charData: data3.results,
     });
     console.log(data);
+    console.log(data3);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -56,23 +52,21 @@ class CardsParent extends React.Component {
   }
 
   render() {
-    const { data } = this.state;
+    const { data, charData } = this.state;
     return (
       <div>
         <form className={f.formStyle} onSubmit={this.reset}>
           <input
-            style={inputStyle}
+            className={f.inputStyle}
             type="text"
             placeholder="Search Episode"
             ref="eps"
             onChange={this.filterNames.bind(this)}
           />
           <br />
-          <button className="btn btn-warning" style={buttonStyle}>
-            Oh Geez Rick
-          </button>
+          <button className={f.buttonStyle}>Oh Geez Rick</button>
         </form>
-        <CardsChild data={data} />
+        <CardsChild data={data} characters={charData} />
       </div>
     );
   }
