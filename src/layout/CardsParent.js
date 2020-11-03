@@ -11,8 +11,8 @@ class CardsParent extends React.Component {
     };
   }
   async componentDidMount() {
-    console.log("ComponentDidMount");
-    console.log("=================");
+    console.log("**ComponentDidMount**");
+
     const url = "https://rickandmortyapi.com/api/episode/?page=1";
     const url2 = "https://rickandmortyapi.com/api/episode/?page=2";
     const characterUrl = "https://rickandmortyapi.com/api/character/?page=1";
@@ -35,8 +35,7 @@ class CardsParent extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.data !== this.state.data) {
-      console.log("ComponentDidUpdate");
-      console.log("=================");
+      console.log("**ComponentDidUpdate**");
     }
   }
 
@@ -57,7 +56,7 @@ class CardsParent extends React.Component {
   render() {
     const { data, charData } = this.state;
     return (
-      <div>
+      <div className={f.formContainer}>
         <form className={f.formStyle} onSubmit={this.reset}>
           <input
             className={f.inputStyle}
@@ -75,8 +74,7 @@ class CardsParent extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log("Component WillUnMount");
-    console.log("=====================");
+    console.log("**Component WillUnMount**");
   }
 }
 export default CardsParent;

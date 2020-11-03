@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+.formContainer {
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: tomato;
+  position: fixed;
+}
 .formStyle {
-  position: relative;
+  position: fixed;
   text-align: center;
   font-family: "Audiowide", cursive;
-  margin-top: 10px;
+  top: 0;
+  left: 50%;
 }
 
 .inputStyle {

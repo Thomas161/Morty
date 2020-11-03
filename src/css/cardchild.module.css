@@ -1,17 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bungee+Inline&display=swap");
-.container {
-  position: relative;
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: auto;
+.containerGrid {
+  position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: auto;
+}
+.styleCards {
+  position: relative;
+  word-break: break-all;
+  width: auto;
+  background: cornsilk;
 }
 .dateAired {
   font-family: "Alex Brush", cursive;
   font-size: 16px;
   text-align: center;
+  background: chocolate;
 }
 
 .titleEpisode {
