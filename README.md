@@ -12,9 +12,9 @@ I love this show, so i thought id make a simple Reactjs app
 
 ### Installation
 
-````npx create-react-app
+``npx create-react-app`
 
-```npm install
+`npm install`
 
 ### Available Scripts
 
@@ -31,4 +31,7 @@ Build out for production
 ### Check Me Out
 
 [Rick And Morty](https://rickandmorty2019.herokuapp.com/)
-````
+
+```
+
+```
