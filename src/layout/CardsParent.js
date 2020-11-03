@@ -65,7 +65,7 @@ class CardsParent extends React.Component {
             ref="eps"
             onChange={this.filterNames.bind(this)}
           />
-          <br />
+          {"   "}
           <button className={f.buttonStyle}>Oh Geez Rick</button>
         </form>
         <CardsChild data={data} characters={charData} />

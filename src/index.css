@@ -1,37 +1,11 @@
 body {
   margin: 0;
-  font-family:  "Roboto";
+  font-family: "Roboto";
   background-image: url("./pic/WallpaperRickMorty.jpg");
   background-size: 100%;
   background-position: fixed;
-    background-repeat : repeat;
-      min-height: 100px;
-      background-attachment: fixed;
-  
+  background-repeat: repeat;
+  min-height: 100px;
+  background-attachment: fixed;
+  overflow: scroll;
 }
-
-.star-rating {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.star {
-  cursor: pointer;
-  width: 2em;
-  height: 1.5em;
-  background-color: grey;
-  -webkit-clip-path: polygon( 50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
-  clip-path: polygon( 50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
-}
-
-.star.selected {
-  background-color: yellow;
-}
-
-p {
-  flex-basis: 100%;
-  text-align: center;
-}
-
-

@@ -8,21 +8,22 @@ export default function CardsChild({ data, characters }) {
   console.log("Data =>", characters);
   return (
     <>
-      <div className={c.containerGrid}>
-        <div className={c.cards}>
-          <div className={c.card}>
-            {data.map((m) => (
-              <div key={m.id} className={c.styleCards}>
-                <h6> {m.episode}</h6>
-                <p>{m.name}</p>
-
-                {/* <StarRating totalStars={5} /> */}
-                <small className={c.dateAired}> Aired: {m.air_date}</small>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <table className={c.containerTable}>
+        <tbody>
+          <tr>
+            <th>Episode no.</th>
+            <th>Title</th>
+            <th>Aired</th>
+          </tr>
+          {data.map((m) => (
+            <tr key={m.id}>
+              <td>{m.episode}</td>
+              <td>{m.name}</td>
+              <td>{m.air_date}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <ImageNavbar characters={characters} />
     </>
   );
