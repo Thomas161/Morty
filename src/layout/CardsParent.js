@@ -58,7 +58,6 @@ class CardsParent extends React.Component {
     const { data, charData } = this.state;
     return (
       <div className={f.formContainer}>
-        <button onClick={() => console.log(window.innerHeight)}>Bottom</button>
         <form className={f.formStyle} onSubmit={this.reset}>
           <input
             className={f.inputStyle}

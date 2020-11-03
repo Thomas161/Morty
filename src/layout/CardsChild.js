@@ -8,22 +8,25 @@ export default function CardsChild({ data, characters }) {
   console.log("Data =>", characters);
   return (
     <>
-      <table className={c.containerTable}>
-        <tbody>
-          <tr>
-            <th className={c.styleHeader}>Episode no.</th>
-            <th className={c.styleHeader}>Title</th>
-            <th className={c.styleHeader}>Aired</th>
-          </tr>
-          {data.map((m) => (
-            <tr key={m.id}>
-              <td className={c.apiStyles}>{m.episode}</td>
-              <td className={c.apiStyles}>{m.name}</td>
-              <td className={c.apiStyles}>{m.air_date}</td>
+      <div className={c.outer}>
+        <table className={c.containerTable}>
+          <tbody className={c.tableBod}>
+            <tr>
+              <th className={c.styleHeader}>Episode no.</th>
+              <th className={c.styleHeader}>Title</th>
+              <th className={c.styleHeader}>Aired</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+            {data.map((m) => (
+              <tr key={m.id}>
+                <td className={c.apiStyles}>{m.episode}</td>
+                <td className={c.apiStyles}>{m.name}</td>
+                <td className={c.apiStyles}>{m.air_date}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <ImageNavbar characters={characters} />
     </>
   );
