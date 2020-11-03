@@ -11,15 +11,15 @@ export default function CardsChild({ data, characters }) {
       <table className={c.containerTable}>
         <tbody>
           <tr>
-            <th>Episode no.</th>
-            <th>Title</th>
-            <th>Aired</th>
+            <th className={c.styleHeader}>Episode no.</th>
+            <th className={c.styleHeader}>Title</th>
+            <th className={c.styleHeader}>Aired</th>
           </tr>
           {data.map((m) => (
             <tr key={m.id}>
-              <td>{m.episode}</td>
-              <td>{m.name}</td>
-              <td>{m.air_date}</td>
+              <td className={c.apiStyles}>{m.episode}</td>
+              <td className={c.apiStyles}>{m.name}</td>
+              <td className={c.apiStyles}>{m.air_date}</td>
             </tr>
           ))}
         </tbody>

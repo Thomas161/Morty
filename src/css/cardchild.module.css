@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bungee+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap");
 .containerTable {
   position: relative;
   left: 10%;
@@ -6,6 +7,17 @@
   display: table;
   width: 80%;
   background: wheat;
-  overflow: scroll;
-  /* grid-template-rows: 200px; */
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+.styleHeader {
+  font-family: "Syne Tactile", cursive;
+  background-color: dodgerblue;
+}
+.apiStyles {
+  font-family: "Alfa Slab One", cursive;
+  background: rgb(219, 60, 60);
+  text-align: center;
+  color: #fff;
+  overflow-y: auto;
 }
