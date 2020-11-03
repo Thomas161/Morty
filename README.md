@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
-![Heroku](https://brand.heroku.com/static/media/heroku-logotype-spacing-vertical.dc54b577.svg)
+![Heroku](https://img.stackshare.io/service/133/3wgIDj3j.png)
 
 ![Sauce](sauce.jpg)
 
