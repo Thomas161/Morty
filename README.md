@@ -1,6 +1,7 @@
-[![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 ![React](https://logos-download.com/wp-content/uploads/2016/09/React_logo_small.png)
 ![Heroku](https://img.stackshare.io/service/133/3wgIDj3j.png)
+
+[![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 
 ![Sauce](sauce.jpg)
 
