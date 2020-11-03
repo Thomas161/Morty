@@ -15,16 +15,19 @@ class CardsParent extends React.Component {
     console.log("=================");
     const url = "https://rickandmortyapi.com/api/episode/?page=1";
     const url2 = "https://rickandmortyapi.com/api/episode/?page=2";
-    const characterUrl = "https://rickandmortyapi.com/api/character/";
+    const characterUrl = "https://rickandmortyapi.com/api/character/?page=1";
+    const characterUrl2 = "https://rickandmortyapi.com/api/character/?page=2";
     const response = await fetch(url);
     const response2 = await fetch(url2);
     const response3 = await fetch(characterUrl);
+    const response4 = await fetch(characterUrl2);
     const data = await response.json();
     const data2 = await response2.json();
     const data3 = await response3.json();
+    const data4 = await response4.json();
     this.setState({
       data: data.results.concat(data2.results),
-      charData: data3.results,
+      charData: data3.results.concat(data4.results),
     });
     console.log(data);
     console.log(data3);

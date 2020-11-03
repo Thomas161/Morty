@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bungee+Inline&display=swap");
-.row {
-  margin: 10px;
-}
-.cardBody {
-  background: linear-gradient(13deg, orange 60%, cyan 30%);
-  width: 300px;
-  height: 260px;
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .dateAired {
   font-family: "Alex Brush", cursive;
@@ -15,7 +16,4 @@
 
 .titleEpisode {
   font-family: "Bungee Inline", cursive;
-}
-card-header {
-  color: #000;
 }
