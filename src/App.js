@@ -1,7 +1,5 @@
-import React from 'react';
-import  CardsParent from './layout/CardsParent';
-
-
+import React from "react";
+import CardsParent from "./layout/CardsParent";
 
 function App() {
   return (
