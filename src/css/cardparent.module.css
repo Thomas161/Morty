@@ -15,11 +15,11 @@
 }
 .listContainer {
   position: absolute;
-  width: 70%;
+  width: 63%;
   height: 450px;
   background: deeppink;
   top: 150px;
-  left: 126px;
+  left: 450px;
   overflow: auto;
   border-radius: 15px;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ImageNavbar from "./ImageNavbar";
 import f from "../css/cardparent.module.css";
+import i from "../css/imagenavbar.module.css";
 
 const url = "https://rickandmortyapi.com/api/episode/?page=1";
 const url2 = "https://rickandmortyapi.com/api/episode/?page=2";
@@ -54,11 +55,10 @@ const CardsParent = () => {
       />
       <div className={f.listContainer}>
         {filteredEpisodes.map((p) => {
-          console.log(p.characters);
           return (
             <ul key={p.id}>
               <li>
-                {p.episode} {p.name} {p.air_date}
+                {p.episode} {p.name} {p.air_date}{" "}
               </li>
             </ul>
           );
